@@ -1,74 +1,65 @@
 ---
 import { Icon } from 'astro-icon';
-import { Picture } from '@astrojs/image/components';
 
 interface Item {
-  title: string;
+  title?: string;
   description?: string;
   icon?: string;
 }
 
 export interface Props {
   title?: string;
+  subtitle?: string;
+  highlight?: string;
   items: Array<Item>;
-  image?: string | any; // TODO: find HTMLElementProps
 }
 
 const {
   title = await Astro.slots.render('title'),
+  subtitle = await Astro.slots.render('subtitle'),
+  highlight,
   items = [],
-  image = await Astro.slots.render('image'),
 } = Astro.props;
 ---
 
-<section class="px-4 py-16 sm:px-6 mx-auto lg:px-8 lg:py-20 max-w-6xl">
-  <div class="grid gap-6 row-gap-10 md:grid-cols-2">
-    <div class="md:py-4 md:pr-16 mb-4 md:mb-0">
-      {title && <h2 class="mb-8 text-3xl lg:text-4xl font-bold font-heading" set:html={title} />}
+<section class="relative dark:bg-ctp-base">
+  <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+    <div class="py-4 pt-8 sm:py-6 lg:py-8 lg:pt-12">
       {
-        items &&
-          items.length &&
-          items.map(({ title, description, icon }, index) => (
-            <div class="flex">
-              <div class="flex flex-col items-center mr-4">
-                <div>
-                  {index !== items.length - 1 ? (
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-primary dark:border-blue-700 border-2">
-                      {icon && <Icon name={icon} class="w-6 h-6 text-primary dark:text-slate-200" />}
-                    </div>
-                  ) : (
-                    <div class="flex items-center justify-center w-10 h-10 rounded-full border-primary border-2 bg-primary dark:bg-blue-700 dark:border-blue-700">
-                      <Icon name={icon} class="w-6 h-6 text-white dark:text-slate-200" />
-                    </div>
-                  )}
-                </div>
-                <div class="w-px h-full bg-gray-300 dark:bg-slate-500" />
+        (title || subtitle || highlight) && (
+          <div class="mb-8 md:mx-auto text-center max-w-3xl">
+            {highlight && (
+              <p
+                class="text-base text-primary dark:text-blue-200 font-semibold tracking-wide uppercase"
+                set:html={highlight}
+              />
+            )}
+            {title && (
+              <h2
+                class="text-4xl md:text-5xl font-bold leading-tighter tracking-tighter mb-4 font-heading"
+                set:html={title}
+              />
+            )}
+
+            {subtitle && (
+              <p class="max-w-3xl mx-auto sm:text-center text-xl text-muted dark:text-slate-400" set:html={subtitle} />
+            )}
+          </div>
+        )
+      }
+      <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-2 my-12 dark:text-white items-stretch">
+        {
+          items.map(({ title, description, icon }) => (
+            <div class="relative flex flex-col p-6 bg-white dark:bg-slate-900 rounded shadow-lg hover:shadow-md transition border border-transparent dark:border-slate-800">
+              <div class="flex items-center">
+                <Icon name={icon} class="w-10 h-10" />
+                <div class="ml-4 text-xl font-bold">{title}</div>
               </div>
-              <div class={`pt-1 ${index !== items.length - 1 ? 'pb-8' : ''}`}>
-                {title && <p class="mb-2 text-xl font-bold dark:text-slate-300" set:html={title} />}
-                {description && <p class="text-muted dark:text-slate-400" set:html={description} />}
-              </div>
+              {description && <p class="text-muted dark:text-gray-400 text-md mt-4" set:html={description} />}
             </div>
           ))
-      }
-    </div>
-    <div class="relative">
-      {
-        image &&
-          (typeof image === 'string' ? (
-            <Fragment set:html={image} />
-          ) : (
-            <Picture
-              class="inset-0 object-cover object-top w-full rounded-md shadow-lg md:absolute md:h-full bg-gray-400 dark:bg-slate-700"
-              widths={[400, 768]}
-              sizes="(max-width: 768px) 100vw, 432px"
-              aspectRatio="432:768"
-              width={432}
-              height={768}
-              {...image}
-            />
-          ))
-      }
+        }
+      </div>
     </div>
   </div>
 </section>

@@ -13,5 +13,6 @@
   "prettier.documentSelectors": ["**/*.astro"],
   "[astro]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "cSpell.words": ["Astro", "changeme", "ngmilogo", "ngmisl", "tabler"]
 }

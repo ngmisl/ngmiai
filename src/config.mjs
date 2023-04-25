@@ -1,18 +1,18 @@
-import defaultImage from './assets/images/default.png';
+import defaultImage from './assets/images/ngmilogo.webp';
 
 const CONFIG = {
-  name: 'AstroWind',
+  name: 'ngmisl',
 
   origin: 'https://astrowind.vercel.app',
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'AstroWind — Free template for create a website with Astro + Tailwind CSS',
+  title: 'Not Gonna Make It, SL | Unconventional Solutions & Innovations',
   description:
-    '🚀 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.',
+    'Explore Not Gonna Make It, SL, the home of out-of-the-box thinking and groundbreaking solutions. Dive into our creative approach to problem-solving, designed to challenge the ordinary and transform the impossible.',
   defaultImage: defaultImage,
 
-  defaultTheme: 'system', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
+  defaultTheme: 'dark:only', // Values: "system" | "light" | "dark" | "light:only" | "dark:only"
 
   language: 'en',
   textDirection: 'ltr',
@@ -25,10 +25,10 @@ const CONFIG = {
   }),
 
   googleAnalyticsId: false, // or "G-XXXXXXXXXX",
-  googleSiteVerificationId: 'orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M',
+  googleSiteVerificationId: '',
 
   blog: {
-    disabled: false,
+    disabled: true,
     postsPerPage: 4,
 
     post: {

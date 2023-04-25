@@ -8,9 +8,6 @@ import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
-import LatestPosts from '~/components/blog/LatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const meta = {
@@ -24,22 +21,23 @@ const meta = {
   <!-- Hero Widget ******************* -->
 
   <Hero
-    callToAction={{ text: 'Get template', href: 'https://github.com/onwidget/astrowind', icon: 'tabler:download' }}
-    callToAction2={{ text: 'Learn more', href: '#features' }}
-    image={{ src: import('~/assets/images/hero.png'), alt: 'AstroWind Hero Image' }}
+    callToAction2={{ text: 'Our Services', href: '#services' }}
+    image={{ src: import('~/assets/images/herovec.png'), alt: 'AstroWind Hero Image' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden lg:inline">create your website <br class="2xl:hidden"/> with</span>
-      <span class="text-accent dark:text-white highlight"> Astro 2.0</span> + Tailwind CSS
+      <span class="block lg:inline"
+        >Empower Your Project with <span class="text-accent dark:text-ctp-sky highlight"> Blockchain</span> & <span
+          class="text-accent dark:text-ctp-sky highlight"
+        >
+          Web3</span
+        ></span
+      >
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro 2.0 +
-        Tailwind CSS.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span> Suitable for Startups,
-      Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs.
+      <span class="block sm:inline">
+        <span class="font-semibold">Enter the future of decentralized innovation with NGMI</span>
+      </span>
     </Fragment>
   </Hero>
 
@@ -50,48 +48,47 @@ const meta = {
   <!-- Features Widget *************** -->
 
   <Features
-    highlight="Features"
-    title="What you get with AstroWind"
-    subtitle="Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque rem aperiam, eaque ipsa quae."
+    title="Why Blockchain"
+    subtitle="Discover the advantages of implementing web3 and blockchain technology in your business and stay ahead of the curve."
     items={[
       [
         {
-          title: 'Astro + Tailwind CSS Integration',
+          title: 'Enhanced Security',
           description:
-            'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-          icon: 'tabler:brand-tailwind',
+            'Blockchain technology provides a secure, decentralized, and tamper-proof data storage solution, protecting against cyber attacks and fraud.',
+          icon: 'tabler:shield-check',
         },
         {
-          title: 'Ready-to-use Components',
+          title: 'Increased Transparency',
           description:
-            'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-          icon: 'tabler:components',
+            'The decentralized nature of blockchain ensures transparency and traceability, allowing for a more efficient audit process and fostering trust among stakeholders.',
+          icon: 'tabler:eye',
         },
         {
-          title: 'Best Practices',
+          title: 'Reduced Costs',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:list-check',
+            'By eliminating intermediaries and automating processes with smart contracts, blockchain technology can significantly reduce operational costs.',
+          icon: 'tabler:coin',
         },
       ],
       [
         {
-          title: 'Excellent Page Speed',
+          title: 'Decentralization, Security, and Cutting-Edge Innovationed Efficiency',
           description:
-            'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+            "Blockchain's decentralized, secure, and transparent structure streamlines processes, reduces redundancies, and enhances data sharing across networks.",
           icon: 'tabler:rocket',
         },
         {
-          title: 'Search Engine Optimization (SEO)',
+          title: 'Fostering Innovation',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:arrows-right-left',
+            'Web3 & blockchain technology open up new possibilities for businesses to explore, from tokenization and decentralized finance to decentralized applications (dApps).',
+          icon: 'tabler:download',
         },
         {
-          title: 'Open to new ideas and contributions',
+          title: 'Enhanced User Experience',
           description:
-            'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla.',
-          icon: 'tabler:bulb',
+            'Web3 integration allows for seamless, secure, and user-friendly interactions with decentralized applications and platforms, driving better user engagement.',
+          icon: 'tabler:users',
         },
       ],
     ]}
@@ -100,34 +97,35 @@ const meta = {
   <!-- Content Widget **************** -->
 
   <Content
-    highlight="Inside template"
-    title="And what's inside? ..."
+    title="We Walk the Walk with You"
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Expert Developers',
         description:
-          'Ex usu illum iudico molestie. Pro ne agam facete mediocritatem, ridens labore facete mea ei. Pro id apeirian dignissim.',
+          'Our team consists of highly skilled developers with extensive experience in the blockchain and web3 space, ensuring top-notch solutions for your projects.',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Deep Blockchain & Web3 Background',
         description:
-          'Amet utinam aliquando ut mea, malis admodum ocurreret nec et, elit tibique cu nec. Nec ex maluisset inciderint, ex quis.',
+          'We understand the ins and outs of the ever-evolving blockchain and web3 technologies, enabling us to provide innovative and effective solutions.',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Client-Centric Approach',
         description:
-          'At sed possim oporteat probatus, justo graece ne nec, minim commodo legimus ut vix. Ut eos iudico quando soleat, nam modus.',
+          'We work closely with you to understand your unique needs and goals, crafting tailored solutions that drive success and growth for your business.',
       },
     ]}
     image={{
-      src: import('~/assets/images/caos.jpg'),
+      src: import('~/assets/images/hero_ngmi.webp'),
       alt: 'Colorful Image',
     }}
   >
     <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Ad vix debet docendi</h3>
-      Ne dicta praesent ocurreret has, diam theophrastus at pro. Eos etiam regione ut, persius eripuit quo id. Sit te euismod
-      tacimates.
+      <h3 class="text-2xl font-bold tracking-tight dark:text-ctp-text sm:text-3xl mb-2">
+        Your Web3 & Blockchain Partner
+      </h3>
+      At NGMI, we're dedicated to empowering businesses with innovative web3 and blockchain solutions. Our team of experts
+      brings their deep knowledge and passion to every project, ensuring your success in the decentralized world.
     </Fragment>
   </Content>
 
@@ -138,196 +136,91 @@ const meta = {
     isAfterContent
     items={[
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Decentralized Finance (DeFi)',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Smart Contracts & dApps',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Tokenization & Digital Assets',
       },
       {
-        title: 'Per ei quaeque sensibus',
+        title: 'Web3 Gaming & Virtual Economies',
       },
       {
-        title: 'Cu imperdiet posidonium sed',
+        title: 'Metaverse & Virtual Reality',
       },
       {
-        title: 'Nulla omittam sadipscing mel ne',
+        title: 'Identity & Data Privacy',
       },
     ]}
     image={{
-      src: import('~/assets/images/vintage.jpg'),
-      alt: 'Vintage Image',
+      src: import('~/assets/images/ngmi2.webp'),
+      alt: 'NGMI second',
     }}
   />
 
-  <!-- Steps Widget ****************** -->
-
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    title="Our Projects"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'MintWorldGame.com',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula.',
-        icon: 'tabler:package',
+          'MintWorld is a community-owned web3-based 2D Monster Catcher RPG. Players can collect, fight, and trade unique blockchain-based monsters in this immersive game experience.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</em>',
+        title: 'Cantoverse.net',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla.',
-        icon: 'tabler:letter-case',
-      },
-      {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mirisus tempus nulla, sed porttitor est nibh at nulla. Praesent placerat enim ut ex tincidunt vehicula. Fusce sit amet dui tellus.',
-        icon: 'tabler:paint',
-      },
-      {
-        title: 'Ready!',
-        icon: 'tabler:check',
+          'Cantoverse is an Art Gallery and Decentralized Marketplace built on Canto. Discover unique NFTs created by talented artists from around the world, and buy or sell them securely in Cantoverse.',
+        icon: 'tabler:shopping-cart',
       },
     ]}
-    image={{
-      src: import('~/assets/images/creativity.jpg'),
-      alt: 'Steps image',
-    }}
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS"
-    highlight="Components"
+    title="Our Customer Services"
+    subtitle="Explore the possibilities of Blockchain and Web3 technology for your business"
     items={[
       {
-        title: 'Headers',
+        title: 'Blockchain Smart Contract Development',
         description:
-          'In general, Headers contain information that makes it easier for visitors to interact with the website.',
-        icon: 'flat-color-icons:template',
+          'Our team of experts will help you design, develop, and deploy smart contracts tailored to your business needs.',
+        icon: 'tabler:shield',
       },
       {
-        title: 'Heros',
+        title: 'Blockchain Consulting',
         description:
-          'If you want your website to get more than its fair share of visitors, the Hero section needs to be stellar.',
-        icon: 'flat-color-icons:gallery',
+          "We offer advice on strategic movement to Blockchain and Web3 technology based on your demands and requirements, going hand in hand with your company's mission and vision.",
+        icon: 'tabler:help',
       },
       {
-        title: 'Features',
+        title: 'Unity Game Development & Consulting',
         description:
-          'Display your product in action and how the Features actually create a solution for your target customer.',
-        icon: 'flat-color-icons:todo-list',
+          'Leverage our expertise in Unity game development to create engaging gaming experiences and integrate blockchain technology seamlessly.',
+        icon: 'tabler:download',
       },
       {
-        title: 'Content',
+        title: 'Web3 integration',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:document',
+          'Integrate Web3 technology into your games, enabling decentralized features and token-based economies to drive user engagement and retention.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Call-to-Action',
+        title: 'API & Infrastructure Development',
         description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:advertising',
+          'Our team can help you design and develop robust APIs and infrastructure solutions to support your blockchain and Web3 applications.',
+        icon: 'tabler:rocket',
       },
-      {
-        title: 'Pricing',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.',
-        icon: 'icon-park:page-template',
-      },
-    ]}
-  />
 
-  <!-- HighlightedPosts Widget ******* -->
-
-  <LatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-			Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-			Astro is a very interesting technology. Thanks.
-		`}
-    postIds={[
-      'get-started-website-with-astro-tailwind-css.md',
-      'how-to-customize-astrowind-to-your-brand.md',
-      'useful-resources-to-create-websites.md',
-      'astrowind-template-in-depth.md',
-    ]}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Duis turpis dui, fringilla mattis sem nec, fringilla euismod neque. Morbi tincidunt lacus nec tortor scelerisque pulvinar."
-    highlight="FAQs"
-    items={[
-      [
-        {
-          question: 'What do I need to start?',
-          answer:
-            'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-        },
-        {
-          question: 'How to install the Astro + Tailwind CSS template?',
-          answer:
-            "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. Some pilots get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.",
-        },
-        {
-          question: "What's something that you don't understand?",
-          answer:
-            "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-        },
-      ],
-      [
-        {
-          question: "What's an example of when you changed your mind?",
-          answer:
-            "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-        },
-        {
-          question: 'What is something that you would like to try again?',
-          answer:
-            "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-        },
-        {
-          question: 'If you could only ask one question to each person you meet, what would that question be?',
-          answer:
-            "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-        },
-      ],
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    items={[
-      { name: 'Downloads', value: '132K' },
-      { name: 'Stars', value: '24.8K' },
-      { name: 'Forks', value: '10.3K' },
-      { name: 'Users', value: '48.4K' },
+      {
+        title: 'Custom Blockchain Solutions',
+        description:
+          'Tailor-made blockchain solutions designed specifically for your unique business requirements and objectives.',
+        icon: 'tabler:tools',
+      },
     ]}
   />
 
@@ -335,18 +228,16 @@ const meta = {
 
   <CallToAction
     callToAction={{
-      text: 'Get template',
-      href: 'https://github.com/onwidget/astrowind',
-      icon: 'tabler:download',
+      text: 'Contact Us',
+      href: '/contact',
+      icon: 'tabler:mail',
     }}
   >
-    <Fragment slot="title">
-      Astro + <br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
-    </Fragment>
+    <Fragment slot="title">Get in Touch</Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Interested in our services or have any questions? <br class="hidden md:inline" />
+      Don't hesitate to reach out!
     </Fragment>
   </CallToAction>
 </Layout>

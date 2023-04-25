@@ -1,0 +1,21 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+const title = `Contact Not Gonna Make It, SL`;
+---
+
+<Layout meta={{ title }}>
+  <section class="container mx-auto px-4 py-12 flex flex-col items-center justify-center">
+    <h1 class="text-4xl font-bold mb-6">Contact Us</h1>
+    <p class="text-lg mb-8">
+      If you have any questions or need assistance, please fill out the form below and we'll get back to you as soon as
+      possible.
+    </p>
+    <iframe
+      class="rounded-md shadow-lg"
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeuPlOeWCoFA9zfkTUN4OCYHxiN8OsVYr2Rh9Yccixbn9vh3g/viewform?embedded=true"
+      width="1024"
+      height="1024">Loading…</iframe
+    >
+  </section>
+</Layout>
