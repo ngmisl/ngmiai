@@ -27,7 +27,7 @@ export const headerData = {
         },
         {
           text: 'Contact',
-          href: '/contact',
+          href: '#contact',
         },
         {
           text: 'Blog',
