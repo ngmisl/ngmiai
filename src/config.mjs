@@ -7,7 +7,7 @@ const CONFIG = {
   basePathname: '/',
   trailingSlash: false,
 
-  title: 'Not Gonna Make It, SL | Unconventional Solutions & Innovations',
+  title: 'NGMI SL',
   description:
     'Explore Not Gonna Make It, SL, the home of out-of-the-box thinking and groundbreaking solutions. Dive into our creative approach to problem-solving, designed to challenge the ordinary and transform the impossible.',
   defaultImage: defaultImage,

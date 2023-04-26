@@ -3,8 +3,12 @@ import { getPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'Pages',
+      text: 'Navigation',
       links: [
+        {
+          text: 'Home',
+          href: '/',
+        },
         {
           text: 'Why Blockchain',
           href: '#features',
@@ -12,6 +16,14 @@ export const headerData = {
         {
           text: 'About us',
           href: '#about',
+        },
+        {
+          text: 'Projects',
+          href: '#projects',
+        },
+        {
+          text: 'Services',
+          href: '#services',
         },
         {
           text: 'Contact',
