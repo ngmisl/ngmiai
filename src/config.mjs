@@ -3,7 +3,7 @@ import defaultImage from './assets/images/ngmilogo.webp';
 const CONFIG = {
   name: 'ngmisl',
 
-  origin: 'https://astrowind.vercel.app',
+  origin: 'https://ngmi.ai',
   basePathname: '/',
   trailingSlash: false,
 
