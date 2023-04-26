@@ -29,6 +29,10 @@ export const headerData = {
           text: 'Contact',
           href: '/contact',
         },
+        {
+          text: 'Blog',
+          href: 'https://mirror.xyz/metaend.eth',
+        },
       ],
     },
   ],
@@ -47,6 +51,7 @@ export const footerData = {
   socialLinks: [
     { ariaLabel: 'Mastodon', icon: 'tabler:rocket', href: 'https://mastodon.online/@ngmi' },
     { ariaLabel: 'Twitter', icon: 'tabler:brand-twitter', href: 'https://twitter.com/ngmisl' },
+    { ariaLabel: 'LinkedIN', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/ngmi/' },
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: 'https://github.com/ngmisl' },
   ],
   footNote: `
