@@ -9,6 +9,7 @@ import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
 import Content from '~/components/widgets/Content.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Newsletter from '~/components/widgets/Newsletter.astro';
 
 const meta = {
   title: SITE.title,
@@ -179,6 +180,14 @@ const meta = {
         link: 'https://www.cantoverse.net',
         buttonText: 'Visit Cantoverse',
       },
+      {
+        title: 'AliceGame.xyz',
+        description:
+          ' Alice is a Web3 2D game that follows a young girl navigating societal pressures. With beautiful AI-drawn graphics and an engaging storyline, Alice offers a unique gaming experience with multiple endings and branching paths.',
+        icon: 'tabler:world',
+        link: 'https://www.alicegame.xyz',
+        buttonText: 'Visit Alice',
+      },
     ]}
   />
 
@@ -253,4 +262,5 @@ const meta = {
       </p>
     </Fragment>
   </CallToAction>
+  <Newsletter />
 </Layout>
