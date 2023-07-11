@@ -30,6 +30,10 @@ export const headerData = {
           href: '/#contact',
         },
         {
+          text: 'AI',
+          href: '/ai',
+        },
+        {
           text: 'Blog',
           href: 'https://mirror.xyz/metaend.eth',
         },
