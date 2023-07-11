@@ -11,23 +11,23 @@ export const headerData = {
         },
         {
           text: 'Why Blockchain',
-          href: '#features',
+          href: '/#features',
         },
         {
           text: 'About us',
-          href: '#about',
+          href: '/#about',
         },
         {
           text: 'Projects',
-          href: '#projects',
+          href: '/#projects',
         },
         {
           text: 'Services',
-          href: '#services',
+          href: '/#services',
         },
         {
           text: 'Contact',
-          href: '#contact',
+          href: '/#contact',
         },
         {
           text: 'Blog',
@@ -37,8 +37,9 @@ export const headerData = {
     },
   ],
   actions: [
+    { type: 'button', text: 'AI', href: '/ai' },
     { type: 'button', text: 'Blog', href: 'https://mirror.xyz/metaend.eth' },
-    { type: 'button', text: 'Services', href: '#services' },
+    { type: 'button', text: 'Services', href: '/#services' },
   ],
 };
 

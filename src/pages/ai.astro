@@ -1,0 +1,111 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+
+import Header from '~/components/widgets/Header.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
+import Content from '~/components/widgets/Content.astro';
+
+import Cal from '~/components/widgets/Cal.astro';
+
+const meta = {
+  title: 'Ai Automation As A Service',
+};
+---
+
+<Layout {meta}>
+  <Fragment slot="header">
+    <Header
+      actions={[
+        {
+          type: 'primary',
+          text: 'Contact',
+          href: '#my-cal-inline',
+        },
+      ]}
+      isSticky
+    />
+  </Fragment>
+
+  <!-- Hero2 Widget ******************* -->
+
+  <Hero2
+    callToAction={{ text: 'Book a free consulting call', href: '#my-cal-inline', icon: 'tabler:phone' }}
+    image={{ src: import('~/assets/images/aihero2.webp'), alt: 'AI Automation Services Hero Image' }}
+  >
+    <Fragment slot="title">Unleash the Power of AI in Your Business with Our AI Automation Services</Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Our AI Automation Agency</span> is dedicated to helping you stay on the bleeding edge
+        of trends and technology. Save time, money, and energy by integrating AI into your business operations.</span
+      >
+      <br /><span class="font-semibold">Your Confidentiality, Our Priority.</span> We understand the value of your proprietary
+      information and company secrets. We prioritize your confidentiality and have stringent measures in place to ensure
+      the security of your data.
+    </Fragment>
+  </Hero2>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    isReversed
+    items={[
+      {
+        title: 'AI Automations',
+        description:
+          "Automate any system or process within your business. From automating email responses, lead generation and follow-up, to compiling information and outputting content, we've got you covered.",
+      },
+      {
+        title: 'AI Conversational Chatbots',
+        description:
+          "Improve your customer service with our AI conversational chatbots. Trained on all of your website's information, they can answer customer queries on inventory, customer stock, and other FAQs.",
+      },
+      {
+        title: 'AI Tool Stack',
+        description:
+          'We analyze your entire business and recommend specific AI tools that will make your company more optimized and efficient.',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/ai2.webp'),
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Unleash the Power of AI in Your Business
+      </h3>
+      Stay on the bleeding edge of trends and technology. Save time, money, and energy by integrating AI into your business
+      operations.
+    </Fragment>
+  </Content>
+
+  <!-- Content Widget **************** -->
+
+  <Content
+    items={[
+      {
+        title: 'Your Confidentiality, Our Priority',
+        description:
+          'We understand the value of your proprietary information and company secrets. We prioritize your confidentiality and have stringent measures in place to ensure the security of your data. Our AI solutions are designed with privacy and security at their core. We adhere to the highest standards of data protection and ensure that all our services are compliant with global privacy laws and regulations. Rest assured, your company secrets and sensitive information are in safe hands.',
+      },
+      {
+        title: 'Contact Us',
+        description: 'Book a free Call with us!',
+      },
+    ]}
+    image={{
+      src: import('~/assets/images/ai3.webp'),
+      alt: 'Colorful Image',
+    }}
+  >
+    <Fragment slot="content">
+      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">
+        Ready to transform your business with AI?
+      </h3>
+      Book a free consulting call with us today!
+    </Fragment>
+  </Content>
+
+  <Cal />
+</Layout>
